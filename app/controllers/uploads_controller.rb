@@ -14,6 +14,16 @@ class UploadsController < ApplicationController
   	end
   end
 
+  def destroy
+      @upload = Upload.find(params[:id])
+      if @upload.destroy
+        render json: { message: "File deleted from server" }
+      else
+        render json: { message: @upload.errors.full_messages.join(',') }
+      end
+  end
+
+
   private
   def upload_params
   	params.require(:upload).permit(:image)
