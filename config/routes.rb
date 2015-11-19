@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'uploads/new'
+  root 'uploads#new'
+  resources :uploads
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
