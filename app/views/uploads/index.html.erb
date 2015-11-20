@@ -1,0 +1,18 @@
+<div class="col s12 m12 l10">
+        <div id="masonry-grid" class="row">
+
+        <% @uploads.each do |upload| %>
+            <div class="col s12 m6 l4">
+                <div class="card">
+                    <div class="card-image">
+                        <%= image_tag upload.image.url %>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+        </div>
+</div>
+
+
+
+

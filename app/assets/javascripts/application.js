@@ -16,3 +16,19 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$( document ).ready(function() {
+    $(function(){
+
+        var $container = $('#masonry-grid');
+        $container.imagesLoaded( function() {
+            $container.masonry(
+                {
+                    columnWidth: '.col',
+                    itemSelector: '.col',
+                });
+        });
+
+    });
+    $(".button-collapse").sideNav();
+});
